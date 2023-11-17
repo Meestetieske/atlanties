@@ -1,0 +1,45 @@
+{
+  "name": "atlanties",
+  "version": "0.0.1",
+  "description": "Component Library Project",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test-ct": "playwright test -c playwright-ct.config.ts",
+    "test-ct-ui": "postcss src/tailwind.css -o pw-dist/styles.css && playwright test -c playwright-ct.config.ts --ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meestetieske/atlanties.git"
+  },
+  "author": "Matthijs van Rens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meestetieske/atlanties/issues"
+  },
+  "homepage": "https://github.com/Meestetieske/atlanties#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.40.0",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/node": "^20.9.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.5.3",
+    "tailwind-variants": "^0.1.18",
+    "tailwindcss": "^3.3.5"
+  }
+}
