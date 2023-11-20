@@ -1,0 +1,14 @@
+# General
+.DS_Store
+
+# ignore node/grunt dependency directories
+node_modules/
+
+# Ignore build directories.
+/build
+/dist
+/pw-dist
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
