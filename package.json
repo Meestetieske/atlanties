@@ -6,8 +6,9 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-ct": "playwright test -c playwright-ct.config.ts",
-    "test-ct-ui": "postcss src/tailwind.css -o pw-dist/styles.css && playwright test -c playwright-ct.config.ts --ui"
+    "build-css": "postcss src/tailwind.css -o pw-dist/styles.css",
+    "test-ct": "npm run build-css && playwright test -c playwright-ct.config.ts",
+    "test-ct-ui": "npm run build-css && playwright test -c playwright-ct.config.ts --ui"
   },
   "repository": {
     "type": "git",
