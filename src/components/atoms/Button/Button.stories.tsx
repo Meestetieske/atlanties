@@ -2,7 +2,7 @@ import type { ComponentProps } from "react";
 import type { Meta, StoryFn } from "@storybook/react";
 
 // import { userEvent, within } from '@storybook/testing-library';
-import { Button } from "./Button";
+import Button from ".";
 
 export default {
   component: Button,

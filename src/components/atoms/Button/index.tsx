@@ -15,11 +15,20 @@ export const buttonParentClasses = tv({
     "transition-colors",
     "rounded-lg",
     "font-bold tracking-wide",
+    "text-white",
   ],
   variants: {
     color: {
-      primary: ["bg-primary-400", "hover:bg-primary-200"],
-      secondary: ["bg-secondary-400", "hover:bg-secondary-200"],
+      primary: [
+        "bg-primary-400",
+        "hover:bg-primary-200",
+        "focus:outline-primary-600",
+      ],
+      secondary: [
+        "bg-secondary-400",
+        "hover:bg-secondary-200",
+        "focus:outline-secondary-600",
+      ],
     },
   },
 });
@@ -28,10 +37,21 @@ export const buttonContentClasses = tv({
   base: ["c-button__label", "flex", "px-6", "py-3"],
 });
 
-export function Button({ children, color = "primary", onClick }: ButtonProps) {
+export function Button({
+  children,
+  color = "primary",
+  type = "button",
+  onClick,
+}: ButtonProps) {
   return (
-    <button className={buttonParentClasses({ color })} onClick={onClick}>
+    <button
+      className={buttonParentClasses({ color })}
+      onClick={onClick}
+      type={type}
+    >
       <span className={buttonContentClasses()}>{children}</span>
     </button>
   );
 }
+
+export default Button;
