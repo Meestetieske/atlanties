@@ -11,6 +11,13 @@ const preview = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div className="text-text">
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default preview;
